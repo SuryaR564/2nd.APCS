@@ -10,7 +10,7 @@ World.setDelay(2);
     Robot r = new Robot(2,2,East,20);
 		
     // examples of commands you can invoke on a Robot
-    r.putBeeper();
+       r.putBeeper();
     r.move();// move one step in the direction it is facing
     r.putBeeper();
     r.move();
@@ -52,5 +52,49 @@ World.setDelay(2);
     r.putBeeper();
     r.move();
     r.putBeeper();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.turnLeft();
+    r.turnLeft();
+    r.move();
+    r.putBeeper();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.turnLeft();
+    r.turnLeft();
+    r.move();
+    r.putBeeper();
+    r.move();
+    r.putBeeper();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.turnLeft();
+    r.turnLeft();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.turnLeft();
+    r.move();
+    r.move();
+    r.putBeeper();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.move();
+    r.move();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.move();
+    r.turnLeft();
+    r.move();
+    r.putBeeper();
+    r.turnLeft();
+    r.move();
+    r.move();
+    r.move();
   }
 }
