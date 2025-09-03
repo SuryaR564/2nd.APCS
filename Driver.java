@@ -38,6 +38,7 @@ public class Driver implements Directions {
 		Robot r = new Robot (7, 7, East, 0);
 
 // 1) Clean this row
+for(int num = 1; num<=5;num++){
 while (r.frontIsClear()==true) {
 	r.move();
 	while (r.nextToABeeper()==true) {
@@ -45,64 +46,27 @@ while (r.frontIsClear()==true) {
 		
 	}
 }
-r.turnLeft();
-r.move();
-r.turnLeft();
-while (r.frontIsClear()==true) {
+if (r.facingEast()==true) {
+	r.turnLeft();
+	if (r.frontIsClear()==true){
 	r.move();
-	while (r.nextToABeeper()==true) {
-		r.pickBeeper();
-		
 	}
+	if (r.frontIsClear()==false){
+		r.turnOff();
+	}
+	r.turnLeft();
 }
-r.turnLeft();
-r.turnLeft();
-r.turnLeft();
-r.move();
-r.turnLeft();
-r.turnLeft();
-r.turnLeft();
-
-while (r.frontIsClear()==true) {
+else if (r.facingWest()){
+	r.turnLeft();
+	r.turnLeft();
+	r.turnLeft();
 	r.move();
-	while (r.nextToABeeper()==true) {
-		r.pickBeeper();
-		
-	}
+	r.turnLeft();
+	r.turnLeft();
+	r.turnLeft();
 }
-r.turnLeft();
-r.move();
-r.turnLeft();
-while (r.frontIsClear()==true) {
-	r.move();
-	while (r.nextToABeeper()==true) {
-		r.pickBeeper();
-		
-	}
+
 }
-	/** This section will have all the logic that takes the Robot to every location 
-	 * and cleans up all piles of beepers.  Think about ways you can break this
-	 * large, complex task into smaller, easier to solve problems.
-	 */
-
-		// the line below causes a null pointer exception
-		// what is that and why are we getting it?
-		
-
-
-  
-
-
-
-
-
-  	/** This method displays the results of cleaning the room.  All of the info
-	 * in the pdf that describes the problem need to be displayed.  You can present
-	 * this info in the console (boring) or you can present using JOptionPane (cool!)
-	 */
-
-  
-
 
   
 
@@ -110,4 +74,3 @@ while (r.frontIsClear()==true) {
 }
 
 	}
-
