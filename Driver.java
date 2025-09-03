@@ -34,16 +34,20 @@ public class Driver implements Directions {
 
 		World.readWorld(wrldName);
     World.setVisible(true);
-	World.setDelay(5);
-		Robot r = new Robot (7, 7, East, 0);
-
+	World.setDelay(1);
+		Robot r = new Robot (7,7, East, 0);
+int numBeepers = 0;
+int largespile = 0;
 // 1) Clean this row
-for(int num = 1; num<=5;num++){
+for(int num = 1; num<=50;num++){
 while (r.frontIsClear()==true) {
 	r.move();
 	while (r.nextToABeeper()==true) {
 		r.pickBeeper();
-		
+		numBeepers++;
+		if (numBeepers > largespile){
+		largespile = numBeepers;
+		}
 	}
 }
 if (r.facingEast()==true) {
@@ -69,7 +73,7 @@ else if (r.facingWest()){
 }
 
   
-
+System.out.println("The number of beepers "+numBeepers);
 
 }
 
